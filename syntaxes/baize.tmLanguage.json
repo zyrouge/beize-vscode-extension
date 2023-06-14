@@ -1,0 +1,190 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Baize Script",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#objects"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#punctuation"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "name": "comment.line.h.baize",
+            "match": "#(.*)"
+        },
+        "objects": {
+            "patterns": [
+                {
+                    "name": "support.class.baize",
+                    "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+                },
+                {
+                    "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b\\s*(\\()",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.function.baize"
+                        }
+                    }
+                }
+            ]
+        },
+        "keywords": {
+            "name": "keyword.baize",
+            "patterns": [
+                {
+                    "name": "keyword.control.import.baize",
+                    "match": "\\b(import|as)\\b"
+                },
+                {
+                    "name": "keyword.control.baize",
+                    "match": "\\b(if|else|while|return|break|continue|try|catch|throw|when|match|for)\\b"
+                },
+                {
+                    "name": "constant.language.baize",
+                    "match": "\\b(true|false|null)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.nullOr.baize",
+                    "match": "(\\?\\?)"
+                },
+                {
+                    "name": "keyword.operator.ternary.baize",
+                    "match": "(\\?|:)"
+                },
+                {
+                    "name": "keyword.operator.assignment.baize",
+                    "match": "(:=|=)"
+                },
+                {
+                    "name": "keyword.operator.comparison.baize",
+                    "match": "(==|!=|<=?|>=?)"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.baize",
+                    "match": "((\\+|-|\\*\\*?|\\/\\/?|%)=?)"
+                },
+                {
+                    "name": "keyword.operator.bitwise.baize",
+                    "match": "(&|\\||\\^|~)"
+                },
+                {
+                    "name": "keyword.operator.logical.baize",
+                    "match": "(!|&&|\\|\\|)"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.single.baize",
+                    "begin": "r?'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "include": "#escaped_char"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.double.baize",
+                    "begin": "r?\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "include": "#escaped_char"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.backtick.baize",
+                    "begin": "r?`",
+                    "end": "`",
+                    "patterns": [
+                        {
+                            "include": "#escaped_char"
+                        }
+                    ]
+                }
+            ]
+        },
+        "escaped_char": {
+            "patterns": [
+                {
+                    "name": "constant.character.escape.baize",
+                    "match": "\\\\[bfnrtv\\\\\"'`\\n]"
+                },
+                {
+                    "name": "constant.character.escape.unicode.baize",
+                    "match": "\\\\u\\{[0-9A-Fa-f]+\\}"
+                },
+                {
+                    "name": "constant.character.escape.byte.baize",
+                    "match": "\\\\x[0-9A-Fa-f][0-9A-Fa-f]"
+                },
+                {
+                    "name": "constant.character.escape.bslash.baize",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.hexadecimal.baize",
+                    "match": "\\b0[Xx][A-Fa-f0-9]+\\b"
+                },
+                {
+                    "name": "constant.numeric.exponent.baize",
+                    "match": "\\b0[Ee]\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric.decimal.baize",
+                    "match": "\\b\\d+\\b"
+                }
+            ]
+        },
+        "punctuation": {
+            "patterns": [
+                {
+                    "name": "punctuation.comma.baize",
+                    "match": ","
+                },
+                {
+                    "name": "punctuation.terminator.baize",
+                    "match": ";"
+                },
+
+                {
+                    "name": "punctuation.nullAccess.baize",
+                    "match": "\\?\\."
+                },
+                {
+                    "name": "punctuation.dot.baize",
+                    "match": "\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.baize"
+}

@@ -1,0 +1,37 @@
+{
+    "name": "baize",
+    "displayName": "Baize",
+    "description": "Baize Language Support",
+    "version": "0.0.1",
+    "publisher": "zyrouge",
+    "icon": "media/icon.png",
+    "engines": {
+        "vscode": "^1.79.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "baize",
+                "aliases": [
+                    "Baize Script",
+                    "baize"
+                ],
+                "extensions": [
+                    ".baize"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "baize",
+                "scopeName": "source.baize",
+                "path": "./syntaxes/baize.tmLanguage.json"
+            }
+        ]
+    },
+    "repository": "https://github.com/zyrouge/baize-vscode-extension"
+}
