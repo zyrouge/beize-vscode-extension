@@ -1,3 +1,3 @@
-# Baize VSCode Extension
+# Beize VSCode Extension
 
-Provides syntax highlighting for Baize.
+Provides syntax highlighting for Beize.

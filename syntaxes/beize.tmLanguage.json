@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "Baize Script",
+    "name": "Beize Script",
     "patterns": [
         {
             "include": "#comments"
@@ -26,38 +26,38 @@
     ],
     "repository": {
         "comments": {
-            "name": "comment.line.h.baize",
+            "name": "comment.line.h.beize",
             "match": "#(.*)"
         },
         "objects": {
             "patterns": [
                 {
-                    "name": "support.class.baize",
+                    "name": "support.class.beize",
                     "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
                 },
                 {
                     "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b\\s*(\\()",
                     "captures": {
                         "1": {
-                            "name": "entity.name.function.baize"
+                            "name": "entity.name.function.beize"
                         }
                     }
                 }
             ]
         },
         "keywords": {
-            "name": "keyword.baize",
+            "name": "keyword.beize",
             "patterns": [
                 {
-                    "name": "keyword.control.import.baize",
+                    "name": "keyword.control.import.beize",
                     "match": "\\b(import|as)\\b"
                 },
                 {
-                    "name": "keyword.control.baize",
+                    "name": "keyword.control.beize",
                     "match": "\\b(if|else|while|return|break|continue|try|catch|throw|when|match|for)\\b"
                 },
                 {
-                    "name": "constant.language.baize",
+                    "name": "constant.language.beize",
                     "match": "\\b(true|false|null)\\b"
                 }
             ]
@@ -65,31 +65,31 @@
         "operators": {
             "patterns": [
                 {
-                    "name": "keyword.operator.nullOr.baize",
+                    "name": "keyword.operator.nullOr.beize",
                     "match": "(\\?\\?)"
                 },
                 {
-                    "name": "keyword.operator.ternary.baize",
+                    "name": "keyword.operator.ternary.beize",
                     "match": "(\\?|:)"
                 },
                 {
-                    "name": "keyword.operator.assignment.baize",
+                    "name": "keyword.operator.assignment.beize",
                     "match": "(:=|=)"
                 },
                 {
-                    "name": "keyword.operator.comparison.baize",
+                    "name": "keyword.operator.comparison.beize",
                     "match": "(==|!=|<=?|>=?)"
                 },
                 {
-                    "name": "keyword.operator.arithmetic.baize",
+                    "name": "keyword.operator.arithmetic.beize",
                     "match": "((\\+|-|\\*\\*?|\\/\\/?|%)=?)"
                 },
                 {
-                    "name": "keyword.operator.bitwise.baize",
+                    "name": "keyword.operator.bitwise.beize",
                     "match": "(&|\\||\\^|~)"
                 },
                 {
-                    "name": "keyword.operator.logical.baize",
+                    "name": "keyword.operator.logical.beize",
                     "match": "(!|&&|\\|\\|)"
                 }
             ]
@@ -97,7 +97,7 @@
         "strings": {
             "patterns": [
                 {
-                    "name": "string.quoted.single.baize",
+                    "name": "string.quoted.single.beize",
                     "begin": "r?'",
                     "end": "'",
                     "patterns": [
@@ -107,7 +107,7 @@
                     ]
                 },
                 {
-                    "name": "string.quoted.double.baize",
+                    "name": "string.quoted.double.beize",
                     "begin": "r?\"",
                     "end": "\"",
                     "patterns": [
@@ -117,7 +117,7 @@
                     ]
                 },
                 {
-                    "name": "string.quoted.backtick.baize",
+                    "name": "string.quoted.backtick.beize",
                     "begin": "r?`",
                     "end": "`",
                     "patterns": [
@@ -131,19 +131,19 @@
         "escaped_char": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.baize",
+                    "name": "constant.character.escape.beize",
                     "match": "\\\\[bfnrtv\\\\\"'`\\n]"
                 },
                 {
-                    "name": "constant.character.escape.unicode.baize",
+                    "name": "constant.character.escape.unicode.beize",
                     "match": "\\\\u\\{[0-9A-Fa-f]+\\}"
                 },
                 {
-                    "name": "constant.character.escape.byte.baize",
+                    "name": "constant.character.escape.byte.beize",
                     "match": "\\\\x[0-9A-Fa-f][0-9A-Fa-f]"
                 },
                 {
-                    "name": "constant.character.escape.bslash.baize",
+                    "name": "constant.character.escape.bslash.beize",
                     "match": "\\\\."
                 }
             ]
@@ -151,15 +151,15 @@
         "numbers": {
             "patterns": [
                 {
-                    "name": "constant.numeric.hexadecimal.baize",
+                    "name": "constant.numeric.hexadecimal.beize",
                     "match": "\\b0[Xx][A-Fa-f0-9]+\\b"
                 },
                 {
-                    "name": "constant.numeric.exponent.baize",
+                    "name": "constant.numeric.exponent.beize",
                     "match": "\\b0[Ee]\\d+\\b"
                 },
                 {
-                    "name": "constant.numeric.decimal.baize",
+                    "name": "constant.numeric.decimal.beize",
                     "match": "\\b\\d+\\b"
                 }
             ]
@@ -167,24 +167,24 @@
         "punctuation": {
             "patterns": [
                 {
-                    "name": "punctuation.comma.baize",
+                    "name": "punctuation.comma.beize",
                     "match": ","
                 },
                 {
-                    "name": "punctuation.terminator.baize",
+                    "name": "punctuation.terminator.beize",
                     "match": ";"
                 },
 
                 {
-                    "name": "punctuation.nullAccess.baize",
+                    "name": "punctuation.nullAccess.beize",
                     "match": "\\?\\."
                 },
                 {
-                    "name": "punctuation.dot.baize",
+                    "name": "punctuation.dot.beize",
                     "match": "\\."
                 }
             ]
         }
     },
-    "scopeName": "source.baize"
+    "scopeName": "source.beize"
 }
