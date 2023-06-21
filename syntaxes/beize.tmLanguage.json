@@ -33,12 +33,12 @@
             "name": "keyword.beize",
             "patterns": [
                 {
-                    "name": "keyword.control.import.beize",
-                    "match": "\\b(import|as)\\b"
+                    "name": "keyword.control.beize",
+                    "match": "\\b(if|else|while|return|break|continue|try|catch|throw|when|match|for)\\b"
                 },
                 {
-                    "name": "keyword.control.beize",
-                    "match": "\\b(if|else|while|return|break|continue|try|catch|throw|when|match|for|async|await|print)\\b"
+                    "name": "keyword.other.beize",
+                    "match": "\\b(import|as|async|await|print|this)\\b"
                 },
                 {
                     "name": "constant.language.beize",
