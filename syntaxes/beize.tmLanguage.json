@@ -6,10 +6,10 @@
             "include": "#comments"
         },
         {
-            "include": "#objects"
+            "include": "#keywords"
         },
         {
-            "include": "#keywords"
+            "include": "#objects"
         },
         {
             "include": "#operators"
@@ -29,6 +29,23 @@
             "name": "comment.line.h.beize",
             "match": "#(.*)"
         },
+        "keywords": {
+            "name": "keyword.beize",
+            "patterns": [
+                {
+                    "name": "keyword.control.import.beize",
+                    "match": "\\b(import|as)\\b"
+                },
+                {
+                    "name": "keyword.control.beize",
+                    "match": "\\b(if|else|while|return|break|continue|try|catch|throw|when|match|for|async|await|print)\\b"
+                },
+                {
+                    "name": "constant.language.beize",
+                    "match": "\\b(true|false|null)\\b"
+                }
+            ]
+        },
         "objects": {
             "patterns": [
                 {
@@ -42,23 +59,6 @@
                             "name": "entity.name.function.beize"
                         }
                     }
-                }
-            ]
-        },
-        "keywords": {
-            "name": "keyword.beize",
-            "patterns": [
-                {
-                    "name": "keyword.control.import.beize",
-                    "match": "\\b(import|as)\\b"
-                },
-                {
-                    "name": "keyword.control.beize",
-                    "match": "\\b(if|else|while|return|break|continue|try|catch|throw|when|match|for)\\b"
-                },
-                {
-                    "name": "constant.language.beize",
-                    "match": "\\b(true|false|null)\\b"
                 }
             ]
         },
@@ -83,6 +83,10 @@
                 {
                     "name": "keyword.operator.arithmetic.beize",
                     "match": "((\\+|-|\\*\\*?|\\/\\/?|%)=?)"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.postfix.beize",
+                    "match": "(\\+\\+|--)"
                 },
                 {
                     "name": "keyword.operator.bitwise.beize",
