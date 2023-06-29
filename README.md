@@ -1,3 +1,5 @@
+[![Beize](https://github.com/zyrouge/beize/blob/main/media/banner.png?raw=true)](https://zyrouge.github.io/beize/)
+
 # Beize VSCode Extension
 
 Provides syntax highlighting for Beize.
