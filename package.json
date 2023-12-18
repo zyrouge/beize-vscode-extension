@@ -2,7 +2,7 @@
     "name": "beize",
     "displayName": "Beize",
     "description": "Beize Language Support",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "publisher": "zyrouge",
     "icon": "media/icon.png",
     "engines": {
