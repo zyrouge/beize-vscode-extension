@@ -33,5 +33,8 @@
             }
         ]
     },
-    "repository": "https://github.com/zyrouge/beize-vscode-extension"
+    "repository": "https://github.com/zyrouge/beize-vscode-extension",
+    "devDependencies": {
+        "@vscode/vsce": "^2.22.0"
+    }
 }

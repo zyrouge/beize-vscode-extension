@@ -38,7 +38,7 @@
                 },
                 {
                     "name": "keyword.other.beize",
-                    "match": "\\b(import|as|async|await|print|this)\\b"
+                    "match": "\\b(import|as|async|await|print|this|only)\\b"
                 },
                 {
                     "name": "constant.language.beize",
